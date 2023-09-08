@@ -5,7 +5,7 @@
 #include <QSpinBox>
 #include <QSlider>
 #include <QHBoxLayout>
-
+#include <QMessageBox>
 void hello()
 {
 //    QLabel * label = new QLabel("Hello Qt!");
@@ -44,6 +44,7 @@ void age()
 
 #include "ui_gotocelldialog.h"
 #include "gotocelldialog.h"
+#include "sortdialog.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -60,8 +61,16 @@ int main(int argc, char *argv[])
         ui.setupUi(dialog);
         dialog->show();
     }
-    GoToCellDialog *dialog = new GoToCellDialog;
-    dialog->show();
+    if(false)
+    {
+        GoToCellDialog *dialog = new GoToCellDialog;
+        dialog->show();
+    }
+    if(!false)
+    {
+        QDialog *dialog = new SortDialog;
+        dialog->show();
+    }
 
     return a.exec();
 }
